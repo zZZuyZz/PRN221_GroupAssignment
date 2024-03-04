@@ -1,0 +1,56 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lexend", sans-serif;
+    font-size: 1.6rem;
+    background: #fffaf5;
+}
+
+/* ========== Common ========== */
+.container {
+    width: 1300px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========== Header ========== */
+.header {
+    position: sticky;
+    top: -14px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #fffaf5;
+}
+
+.navbar {
+    margin-left: -250px;
+}
+
+.header__btn {
+    --height: 50px;
+    min-width: 100px;
+    height: var(--height);
+    line-height: var(--height);
+    transition: all ease 0.2s;
+}
+
+header__btn:last-of-type {
+    border-radius: 8px;
+}
+
+.header__btn:hover {
+    background-color: #d8d8d8;
+    border-radius: 8px;
+}
