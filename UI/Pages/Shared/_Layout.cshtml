@@ -4,33 +4,64 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - UI</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/UI.styles.css" asp-append-version="true" />
+    <!-- Style -->
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+
+    <!-- Embedded fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">UI</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+<body style="height: 8000px">
+    <!-- HEADER -->
+    <header class="pt-4 header border-bottom shadow-sm border-bottom border-solid border-light" style="background: #fffaf5">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between pt-3 pb-3">
+                <!-- LOGO -->
+                <a href="#" >
+                    <img class="w-50 h-50" src="icons/logo.svg" alt="Real Estate" />
+                </a>
+
+                <!-- NAVBAR -->
+                <nav class="navbar">
+                    <ul class="d-flex align-items-center justify-content-between list-unstyled mb-0">
+                        <li class="">
+                            <a href="#" class="d-inline-block px-4 py-2 text-center fs-4" style="color: #2C2C2C" title="Home">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <li class="">
+                            <a href="#" class="d-inline-block px-4 py-2 text-center fs-4" style="color: #2C2C2C" title="About">About</a>
+                        </li>
+                        <li class="">
+                            <a href=""
+                               class="d-inline-block px-4 py-2 text-center fs-4" style="color: #2C2C2C"
+                               title="Services & Rates">Services</a>
+                        </li>
+                        <li class="">
+                            <a href="" class="d-inline-block px-4 py-2 text-center fs-4" style="color: #2C2C2C" title="Review">Review</a>
+                        </li>
+                        <li class="">
+                            <a href=""
+                               class="d-inline-block px-4 py-2 text-center fs-4" style="color: #2C2C2C"
+                               title="Contacts us">Contacts us</a>
                         </li>
                     </ul>
+                </nav>
+
+                <!-- ACTIONS -->
+                <div class="d-flex">
+                    <a href="#!" class="header__btn text-center fs-4" style="color: #2C2C2C">Đăng nhập</a>
+                    <a href="#!" class="header__btn text-center fs-4" style="color: #2C2C2C">Đăng kí</a>
+                    <a href="#!" class="header__btn border border-1 ms-3 text-center fs-4" style="color: #2C2C2C">Đăng tin</a>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
-    <div class="container">
+
+    <div class="container mt-5">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
