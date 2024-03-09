@@ -19,10 +19,10 @@ namespace BO.Models
         public DateTime? EndDate { get; set; }
         public string? ProjectTitle { get; set; }
         public string? ProjectContent { get; set; }
-        public DateTime? CreateAt { get; set; }
-        public DateTime? CreateBy { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public string? CreatedBy { get; set; }
         public DateTime? UpdatedAt { get; set; }
-        public DateTime? UpdateBy { get; set; }
+        public string? UpdatedBy { get; set; }
 
         public virtual User? Investor { get; set; }
         public virtual ICollection<Product> Products { get; set; }

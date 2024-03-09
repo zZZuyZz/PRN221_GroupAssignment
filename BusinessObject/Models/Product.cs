@@ -19,10 +19,10 @@ namespace BO.Models
         public string? Sescription { get; set; }
         public decimal? Price { get; set; }
         public string? Status { get; set; }
-        public DateTime? CreateAt { get; set; }
-        public DateTime? CreateBy { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public string? CreatedBy { get; set; }
         public DateTime? UpdatedAt { get; set; }
-        public DateTime? UpdateBy { get; set; }
+        public string? UpdatedBy { get; set; }
 
         public virtual User? FinalCustomer { get; set; }
         public virtual User? Investor { get; set; }

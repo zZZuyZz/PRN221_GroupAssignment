@@ -11,10 +11,10 @@ namespace BO.Models
         public Guid? AgencyId { get; set; }
         public DateTime? BookingDate { get; set; }
         public string? Status { get; set; }
-        public DateTime? CreateAt { get; set; }
-        public DateTime? CreateBy { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public string? CreatedBy { get; set; }
         public DateTime? UpdatedAt { get; set; }
-        public DateTime? UpdateBy { get; set; }
+        public string? UpdatedBy { get; set; }
 
         public virtual User? Agency { get; set; }
         public virtual User? Customer { get; set; }

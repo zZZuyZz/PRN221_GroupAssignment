@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Service\\Service.csproj": {}
+    "N:\\PRN221_GroupAssignment\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\BusinessObject\\BO.csproj": {
+    "N:\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\BusinessObject\\BO.csproj",
+        "projectUniqueName": "N:\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj",
         "projectName": "BO",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\BusinessObject\\BO.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\BusinessObject\\obj\\",
+        "projectPath": "N:\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj",
+        "packagesPath": "C:\\Users\\noelv\\.nuget\\packages\\",
+        "outputPath": "N:\\PRN221_GroupAssignment\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\noelv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -89,21 +98,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\DAO\\DAO.csproj": {
+    "N:\\PRN221_GroupAssignment\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\DAO\\DAO.csproj",
+        "projectUniqueName": "N:\\PRN221_GroupAssignment\\DAO\\DAO.csproj",
         "projectName": "DAO",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\DAO\\DAO.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\DAO\\obj\\",
+        "projectPath": "N:\\PRN221_GroupAssignment\\DAO\\DAO.csproj",
+        "packagesPath": "C:\\Users\\noelv\\.nuget\\packages\\",
+        "outputPath": "N:\\PRN221_GroupAssignment\\DAO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\noelv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -117,8 +130,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\BusinessObject\\BO.csproj": {
-                "projectPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\BusinessObject\\BO.csproj"
+              "N:\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj": {
+                "projectPath": "N:\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj"
               }
             }
           }
@@ -127,45 +140,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[6.0.16, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -182,21 +166,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Repo\\Repo.csproj": {
+    "N:\\PRN221_GroupAssignment\\Repo\\Repo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Repo\\Repo.csproj",
+        "projectUniqueName": "N:\\PRN221_GroupAssignment\\Repo\\Repo.csproj",
         "projectName": "Repo",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Repo\\Repo.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Repo\\obj\\",
+        "projectPath": "N:\\PRN221_GroupAssignment\\Repo\\Repo.csproj",
+        "packagesPath": "C:\\Users\\noelv\\.nuget\\packages\\",
+        "outputPath": "N:\\PRN221_GroupAssignment\\Repo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\noelv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -210,8 +198,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\DAO\\DAO.csproj": {
-                "projectPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\DAO\\DAO.csproj"
+              "N:\\PRN221_GroupAssignment\\DAO\\DAO.csproj": {
+                "projectPath": "N:\\PRN221_GroupAssignment\\DAO\\DAO.csproj"
               }
             }
           }
@@ -220,45 +208,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[6.0.16, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -275,21 +234,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Service\\Service.csproj": {
+    "N:\\PRN221_GroupAssignment\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Service\\Service.csproj",
+        "projectUniqueName": "N:\\PRN221_GroupAssignment\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Service\\obj\\",
+        "projectPath": "N:\\PRN221_GroupAssignment\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\noelv\\.nuget\\packages\\",
+        "outputPath": "N:\\PRN221_GroupAssignment\\Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\noelv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -303,8 +266,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Repo\\Repo.csproj": {
-                "projectPath": "C:\\Users\\dell\\source\\repos\\PRN221_GroupAssignment_RealEstateManagement\\Repo\\Repo.csproj"
+              "N:\\PRN221_GroupAssignment\\Repo\\Repo.csproj": {
+                "projectPath": "N:\\PRN221_GroupAssignment\\Repo\\Repo.csproj"
               }
             }
           }
@@ -313,45 +276,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.27, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[6.0.16, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -368,7 +302,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
