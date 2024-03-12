@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BO.Models;
 
 namespace Repo.IRepository
 {
     public interface IProjectRepository
     {
+        Project? GetById(Guid id);
     }
 }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BO.Models;
 
-namespace Service.IService
+namespace Service.IService;
+
+public interface IProjectService
 {
-    public class IProjectService
-    {
-    }
+    Project? GetById(Guid projectId);
 }

@@ -16,7 +16,7 @@ namespace BO.Models
         public Guid? FinalCustomerId { get; set; }
         public Guid? ProjectId { get; set; }
         public string? Address { get; set; }
-        public string? Sescription { get; set; }
+        public string? Description { get; set; }
         public decimal? Price { get; set; }
         public string? Status { get; set; }
         public DateTime? CreatedAt { get; set; }

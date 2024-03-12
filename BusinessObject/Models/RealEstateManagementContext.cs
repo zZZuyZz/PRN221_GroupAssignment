@@ -123,7 +123,7 @@ namespace BO.Models
 
                 entity.Property(e => e.Price).HasColumnType("decimal(15, 2)");
 
-                entity.Property(e => e.Sescription).HasColumnType("text");
+                entity.Property(e => e.Description).HasColumnType("text");
 
                 entity.Property(e => e.Status).HasMaxLength(50);
 
