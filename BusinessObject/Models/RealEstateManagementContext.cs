@@ -61,6 +61,12 @@ namespace BO.Models
 
                 entity.Property(e => e.UpdatedBy).HasMaxLength(50);
 
+                entity.Property(e => e.BookingUserName).HasMaxLength(255);
+
+                entity.Property(e => e.PhoneNumber).HasMaxLength(50);
+
+                entity.Property(e => e.Content).HasMaxLength(255);
+
                 entity.HasOne(d => d.Agency)
                     .WithMany(p => p.BookingAgencies)
                     .HasForeignKey(d => d.AgencyId)
@@ -71,9 +77,9 @@ namespace BO.Models
                     .HasForeignKey(d => d.CustomerId)
                     .HasConstraintName("FK__Bookings__Custom__44FF419A");
 
-                entity.HasOne(d => d.RealEstate)
+                entity.HasOne(d => d.Product)
                     .WithMany(p => p.Bookings)
-                    .HasForeignKey(d => d.RealEstateId)
+                    .HasForeignKey(d => d.ProductId)
                     .HasConstraintName("FK__Bookings__RealEs__440B1D61");
             });
 
