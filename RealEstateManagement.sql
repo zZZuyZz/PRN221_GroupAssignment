@@ -65,16 +65,19 @@ GO
 
 CREATE TABLE Bookings(
     Id uniqueidentifier PRIMARY KEY,
-    RealEstateId uniqueidentifier,
+    ProductId uniqueidentifier,
     CustomerId uniqueidentifier,
     AgencyId uniqueidentifier,
+	BookingUserName nvarchar(255),
+	PhoneNumber nvarchar(50),
+	Content nvarchar(255),
     BookingDate datetime,
     [Status] nvarchar(50),
 	CreatedAt datetime,
 	CreatedBy nvarchar(50),
     UpdatedAt datetime,
 	UpdatedBy nvarchar(50),
-    FOREIGN KEY (RealEstateId) REFERENCES Products(Id),
+    FOREIGN KEY (ProductId) REFERENCES Products(Id),
     FOREIGN KEY (CustomerId) REFERENCES Users(Id),
     FOREIGN KEY (AgencyId) REFERENCES Users(Id)
 );
