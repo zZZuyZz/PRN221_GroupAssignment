@@ -1,0 +1,15 @@
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\bin\Debug\net6.0\DAO.deps.json
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\bin\Debug\net6.0\DAO.dll
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\bin\Debug\net6.0\DAO.pdb
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\bin\Debug\net6.0\BO.dll
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\bin\Debug\net6.0\BO.pdb
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\DAO.csproj.AssemblyReference.cache
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\DAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\DAO.AssemblyInfoInputs.cache
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\DAO.AssemblyInfo.cs
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\DAO.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\DAO.csproj.CopyComplete
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\DAO.dll
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\refint\DAO.dll
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\DAO.pdb
+C:\Users\ACER\Source\Repos\PRN221_GroupAssignment\DAO\obj\Debug\net6.0\ref\DAO.dll
