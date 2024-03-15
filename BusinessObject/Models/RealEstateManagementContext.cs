@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace BO.Models
@@ -51,21 +48,21 @@ namespace BO.Models
 
                 entity.Property(e => e.BookingDate).HasColumnType("datetime");
 
+                entity.Property(e => e.BookingUserName).HasMaxLength(255);
+
+                entity.Property(e => e.Content).HasMaxLength(255);
+
                 entity.Property(e => e.CreatedAt).HasColumnType("datetime");
 
                 entity.Property(e => e.CreatedBy).HasMaxLength(50);
+
+                entity.Property(e => e.PhoneNumber).HasMaxLength(50);
 
                 entity.Property(e => e.Status).HasMaxLength(50);
 
                 entity.Property(e => e.UpdatedAt).HasColumnType("datetime");
 
                 entity.Property(e => e.UpdatedBy).HasMaxLength(50);
-
-                entity.Property(e => e.BookingUserName).HasMaxLength(255);
-
-                entity.Property(e => e.PhoneNumber).HasMaxLength(50);
-
-                entity.Property(e => e.Content).HasMaxLength(255);
 
                 entity.HasOne(d => d.Agency)
                     .WithMany(p => p.BookingAgencies)
@@ -80,7 +77,7 @@ namespace BO.Models
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.Bookings)
                     .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK__Bookings__RealEs__440B1D61");
+                    .HasConstraintName("FK__Bookings__Produc__440B1D61");
             });
 
             modelBuilder.Entity<Contract>(entity =>
@@ -127,9 +124,11 @@ namespace BO.Models
 
                 entity.Property(e => e.CreatedBy).HasMaxLength(50);
 
+                entity.Property(e => e.Description).HasColumnType("text");
+
                 entity.Property(e => e.Price).HasColumnType("decimal(15, 2)");
 
-                entity.Property(e => e.Description).HasColumnType("text");
+                entity.Property(e => e.ProductTitle).HasMaxLength(100);
 
                 entity.Property(e => e.Status).HasMaxLength(50);
 
