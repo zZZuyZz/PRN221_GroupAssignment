@@ -1,29 +1,25 @@
 ﻿using BO.Models;
-using Microsoft.EntityFrameworkCore;
 
-namespace DAO;
-
-public class ProjectDAO
+namespace DAO
 {
-    private readonly RealEstateManagementContext _context = new();
-
-    private static ProjectDAO _instance = new();
-
-    public static ProjectDAO Instance
+    public class ProjectDAO
     {
-        get
+        private readonly RealEstateManagementContext _context = new();
+
+        private static ProjectDAO _instance = new();
+
+        public static ProjectDAO Instance
         {
-            if (_instance == null)
+            get
             {
-                _instance = new ProjectDAO();
+                _instance ??= new ProjectDAO();
+                return _instance;
             }
-            return _instance;
         }
-    }
 
-    public Project? GetById(int id, bool includeProducts = false)
-    {
-        return _context.Projects.Include(p => includeProducts ? p.Products : null)
-                                .FirstOrDefault(p => p.Id.Equals(id));
+        public Project? GetById(Guid id)
+        {
+            return _context.Projects.FirstOrDefault(p => p.Id.Equals(id));
+        }
     }
 }
