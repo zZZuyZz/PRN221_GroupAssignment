@@ -6,16 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using BO.Models;
+using Service.IService;
 
 namespace UI.Pages.Bookings
 {
     public class CreateModel : PageModel
     {
-        private readonly BO.Models.RealEstateManagementContext _context;
+        private readonly IBookingService _bookingService;
 
-        public CreateModel(BO.Models.RealEstateManagementContext context)
+        public CreateModel(IBookingService bookingService)
         {
-            _context = context;
+            _bookingService = bookingService;
         }
 
         public IActionResult OnGet()
@@ -30,24 +31,25 @@ namespace UI.Pages.Bookings
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync(Guid? productId)
         {
-          if (!ModelState.IsValid || _context.Bookings == null || Booking == null)
+          if (!ModelState.IsValid)
             {
                 return Page();
             }
             Booking.Id = Guid.NewGuid();
             Booking.CreatedAt = DateTime.Now;
             Booking.CreatedBy = Guid.NewGuid().ToString();
-            Booking.Status = "InProgress"; // You can set the status to "InProgress" here
 
-            // Example: Get userId from session
-            Booking.CustomerId = Guid.NewGuid();
+            // Example: Get userId from session, waiting for session from login
+            Booking.CustomerId = Guid.Parse("13b83b30-200d-4db1-8c9b-173a64b38ba6");
+
+            productId = Guid.Parse("d6f4e6b6-660f-473c-9233-0339335d0a7d");
 
             Booking.ProductId = productId;
 
-            _context.Bookings.Add(Booking);
-            await _context.SaveChangesAsync();
+            _bookingService.CreateBooking(Booking);
 
-            return RedirectToPage("./Index");
+            //waiting for product detail to return
+            return RedirectToPage("Products/Details");
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using BO.Enum;
-using BO.Models;
+﻿using BO.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,13 +33,9 @@ namespace DAO
         {
             return _context.Bookings?.FirstOrDefault(x => x.Id == id);
         }
-        public List<Booking>? GetBookingsByCustomerAgencyId(Guid? id)
+        public List<Booking>? GetBookingsByCustomerId(Guid? id)
         {
-            return _context.Bookings?.Where(x => x.CustomerId == id || x.AgencyId == id).ToList();
-        }
-        public List<Booking>? GetBookingsByStatus(string? status)
-        {
-            return _context.Bookings?.Where(x => x.Status == status).ToList();
+            return _context.Bookings?.Where(x => x.CustomerId == id).ToList();
         }
         public List<Booking>? GetBookingsByProductId(Guid? productId)
         {

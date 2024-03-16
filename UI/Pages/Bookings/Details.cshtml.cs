@@ -6,28 +6,30 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using BO.Models;
+using Service.IService;
+using Service;
 
 namespace UI.Pages.Bookings
 {
     public class DetailsModel : PageModel
     {
-        private readonly BO.Models.RealEstateManagementContext _context;
+        private readonly IBookingService _bookingService;
 
-        public DetailsModel(BO.Models.RealEstateManagementContext context)
+        public DetailsModel(IBookingService bookingService)
         {
-            _context = context;
+            _bookingService = bookingService;
         }
 
-      public Booking Booking { get; set; } = default!; 
+        public  Booking Booking { get; set; } = default!; 
 
         public async Task<IActionResult> OnGetAsync(Guid? id)
         {
-            if (id == null || _context.Bookings == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var booking = await _context.Bookings.FirstOrDefaultAsync(m => m.Id == id);
+            var booking = _bookingService.GetById(id);
             if (booking == null)
             {
                 return NotFound();
