@@ -1,0 +1,91 @@
+﻿@page
+@model UI.Pages.Bookings.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.BookingUserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.BookingUserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.PhoneNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.PhoneNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.Content)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.BookingDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.BookingDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.Status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.CreatedAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.CreatedAt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.CreatedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.CreatedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.UpdatedAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.UpdatedAt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.UpdatedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.UpdatedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.Agency)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.Agency.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.Customer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.Customer.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.Product)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.Product.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Booking?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
