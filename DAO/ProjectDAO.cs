@@ -21,5 +21,20 @@ namespace DAO
         {
             return _context.Projects.FirstOrDefault(p => p.Id.Equals(id));
         }
+        public bool CreateProject(Project? booking)
+        {
+            bool result = false;
+            try
+            {
+                _context.Projects.Add(booking);
+                _context.SaveChanges();
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                return result;
+            }
+            return result;
+        }
     }
 }

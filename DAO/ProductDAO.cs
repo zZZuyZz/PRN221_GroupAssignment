@@ -26,5 +26,20 @@ namespace DAO
         {
             return _context.Products.Where(p => p.ProjectId == projectId).ToList();
         }
+        public bool CreateProduct(Product? booking)
+        {
+            bool result = false;
+            try
+            {
+                _context.Products.Add(booking);
+                _context.SaveChanges();
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                return result;
+            }
+            return result;
+        }
     }
 }

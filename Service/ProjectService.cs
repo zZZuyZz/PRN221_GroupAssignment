@@ -17,6 +17,11 @@ namespace Service
             this.productRepository = productRepository;
         }
 
+        public bool CreateProject(Project? project)
+        {
+            return projectRepository.CreateProject(project);
+        }
+
         public Project? GetById(Guid projectId)
         {
             Project? project = projectRepository.GetById(projectId);

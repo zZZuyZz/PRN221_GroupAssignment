@@ -6,16 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using BO.Models;
+using Service.IService;
 
 namespace UI.Pages.Projects
 {
     public class InvestorCreateProjectProductsModel : PageModel
     {
-        private readonly BO.Models.RealEstateManagementContext _context;
+        private readonly IProjectService _projectService;
+        private readonly IProductService _productService;
 
-        public InvestorCreateProjectProductsModel(BO.Models.RealEstateManagementContext context)
+        public InvestorCreateProjectProductsModel(IProjectService projectService ,IProductService productService)
         {
-            _context = context;
+            _projectService = projectService;
+            _productService = productService;
         }
 
         [BindProperty]
@@ -35,24 +38,31 @@ namespace UI.Pages.Projects
             {
                 return Page();
             }
+            Project.Id = Guid.NewGuid();
+            //wating for userId from session login
+            Project.InvestorId = Guid.NewGuid();
+            Project.ProjectStatus = "Cho duyet";
+            Project.CreatedAt = DateTime.Now;
 
-            _context.Projects.Add(Project);
-            await _context.SaveChangesAsync();
+
+            _projectService.CreateProject(Project);
 
             foreach (var product in Products)
             {
+                product.Id = Guid.NewGuid();
                 product.ProjectId = Project.Id; // Assign projectId to products
-                _context.Products.Add(product);
-            }
 
-            await _context.SaveChangesAsync();
+                // waiting for userid from session login
+                product.InvestorId = Guid.NewGuid();
+                product.CreatedBy = Guid.NewGuid().ToString();
 
+                product.CreatedAt = DateTime.Now;
+
+                _productService.CreateProduct(product);
+            };
+
+            //waiting for return page
             return RedirectToPage("/Index");
-        }
-
-        public void AddProduct()
-        {
-            Products.Add(new Product());
         }
     }
 }

@@ -7,5 +7,6 @@ namespace Repo.IRepository
         Product? GetById(Guid id);
 
         List<Product> GetByProjectId(Guid projectId);
+        public bool CreateProduct(Product? product);
     }
 }

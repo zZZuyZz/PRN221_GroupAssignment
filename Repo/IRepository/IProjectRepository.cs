@@ -5,5 +5,6 @@ namespace Repo.IRepository
     public interface IProjectRepository
     {
         Project? GetById(Guid id);
+        public bool CreateProject(Project? project);
     }
 }
