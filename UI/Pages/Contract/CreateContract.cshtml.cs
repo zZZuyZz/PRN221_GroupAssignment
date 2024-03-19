@@ -14,30 +14,43 @@ namespace UI.Pages.Contract
             _contractService = contractService;
         }
 
-        public IActionResult OnGetAsync(Guid id)
+        public IActionResult OnGet()
         {
-            if (id == null)
-            {
-                return RedirectToPage("./Index");
-            }
-            var correspondingauthor = _contractService.GetContract(id);
-            if (correspondingauthor == null)
-            {
-                return RedirectToPage("./Index");
-            }
 
-            Contract = correspondingauthor;
+            var loginId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(loginId) || !Guid.TryParse(loginId, out var userId))
+            {
+                return RedirectToPage("../Login");
+            }
+           
             ViewData["BookingId"] = new SelectList(_contractService.GetBookingList(), "Id", "CustomerId");
             ViewData["BookingId"] = new SelectList(_contractService.GetBookingList(), "Id", "AgencyId");
-            ViewData["ProductId"] = new SelectList(_contractService.GetBookingList(), "Id", "CustomerId");
 
             return Page();
         }
 
         [BindProperty]
         public BO.Models.Contract Contract { get; set; } = default!;
+        public BO.Models.Product Product {  get; set; } = default!;
 
+        public IActionResult OnPostAsync()
+        {
+            if (Contract == null)
+            {
+                return Page();
+            }
 
+            if (Contract.DepositAmount <0)
+            {
+                ModelState.AddModelError("Contract.DepositAmount",
+                    "Deposit must > 0.");
+                return OnGet();
+            }
+
+            _contractService.AddContract(Contract);
+
+            return RedirectToPage("./Index");
+        }
     }
 }
 
