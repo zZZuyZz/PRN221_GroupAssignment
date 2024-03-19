@@ -20,11 +20,10 @@ namespace UI.Pages.Contract
             var loginId = HttpContext.Session.GetString("UserId");
             if (string.IsNullOrEmpty(loginId) || !Guid.TryParse(loginId, out var userId))
             {
-                return RedirectToPage("../Login");
+                return RedirectToPage("../Index");
             }
            
             ViewData["BookingId"] = new SelectList(_contractService.GetBookingList(), "Id", "CustomerId");
-            ViewData["BookingId"] = new SelectList(_contractService.GetBookingList(), "Id", "AgencyId");
 
             return Page();
         }
