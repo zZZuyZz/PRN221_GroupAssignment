@@ -1,0 +1,15 @@
+E:\fpt\PRN221\New folder (2)\BusinessObject\bin\Debug\net6.0\BO.deps.json
+E:\fpt\PRN221\New folder (2)\BusinessObject\bin\Debug\net6.0\BO.runtimeconfig.json
+E:\fpt\PRN221\New folder (2)\BusinessObject\bin\Debug\net6.0\BO.dll
+E:\fpt\PRN221\New folder (2)\BusinessObject\bin\Debug\net6.0\BO.pdb
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.csproj.AssemblyReference.cache
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.GeneratedMSBuildEditorConfig.editorconfig
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.AssemblyInfoInputs.cache
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.AssemblyInfo.cs
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.csproj.CoreCompileInputs.cache
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.sourcelink.json
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.dll
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\refint\BO.dll
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.pdb
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\BO.genruntimeconfig.cache
+E:\fpt\PRN221\New folder (2)\BusinessObject\obj\Debug\net6.0\ref\BO.dll
