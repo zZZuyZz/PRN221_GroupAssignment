@@ -26,10 +26,11 @@
             <div class="form-group">
                 <label asp-for="Contract.CustomerId" class="control-label"></label>
                 <select asp-for="Contract.CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
-            </div><div class="form-group">
-                <label asp-for="Contract.AgencyId" class="control-label"></label>
-                <select asp-for="Contract.AgencyId" class="form-control" asp-items="ViewBag.AgencyId"></select>
+            <div class="form-group">
+                    <label asp-for="Contract.AgencyId" class="control-label"></label>
+                    <input asp-for="Contract.AgencyId" class="form-control" value="@HttpContext.Session.GetString("UserId")" readonly />
             </div>
+
             <div class="form-group">
                 <label asp-for="Contract.DepositAmount" class="control-label"></label>
                 <input asp-for="Contract.DepositAmount" class="form-control" />
