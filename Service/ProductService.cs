@@ -21,5 +21,15 @@ namespace Service
         {
             return _productRepository.CreateProduct(product);
         }
+
+        public Product? GetById(Guid id)
+        {
+            return _productRepository.GetById(id);
+        }
+
+        public List<Product> GetByProjectId(Guid projectId)
+        {
+            return _productRepository.GetByProjectId(projectId);
+        }
     }
 }

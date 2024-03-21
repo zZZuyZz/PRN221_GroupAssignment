@@ -1,0 +1,70 @@
+﻿@page
+@model UI.Pages.Projects.CustomerProjectsListModel
+
+@{
+    ViewData["Title"] = "ProjectsList";
+}
+
+<div>
+    <a asp-page="./InvestorCreateProjectProducts" >Đăng dự án</a>
+</div>
+<div>
+    <a asp-page="./CustomerHistory">Lịch sử</a>
+</div>
+
+
+<h1>Danh sách dự án</h1>
+
+<div class="col-md-12">
+    <form method="post">
+        <input type="text" name="SearchKey" />
+        <input type="submit" value="Tim bang ten" class="btn btn-info" />
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Địa chỉ")
+            </th>
+            <th>
+                @Html.DisplayName("Ngày bắt đầu")
+            </th>
+            <th>
+                @Html.DisplayName("Ngày kết thúc")
+            </th>
+            <th>
+                @Html.DisplayName("Tên dự án")
+            </th>
+            <th>
+                @Html.DisplayName("Mô tả")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Project) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectContent)
+            </td>
+            <td>
+                <a asp-page="./ProjectDetails" asp-route-id="@item.Id">Chi tiết</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

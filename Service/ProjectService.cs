@@ -17,6 +17,11 @@ namespace Service
             this.productRepository = productRepository;
         }
 
+        public bool ApproveProject(Guid id)
+        {
+            return projectRepository.ApproveProject(id);
+        }
+
         public bool CreateProject(Project? project)
         {
             return projectRepository.CreateProject(project);
@@ -29,9 +34,23 @@ namespace Service
             {
                 return null;
             }
-            project.Investor = userRepository.GetById((Guid)project.InvestorId!);
             project.Products = productRepository.GetByProjectId(projectId);
             return project;
+        }
+
+        public List<Project>? GetByProjectTitle(string name)
+        {
+            return projectRepository.GetByProjectTitle(name);
+        }
+
+        public List<Project>? GetProjects()
+        {
+            return projectRepository.GetProjects();
+        }
+
+        public List<Project>? GetProjectsByInvestorId(Guid id)
+        {
+            return projectRepository.GetProjectsByInvestorId(id);
         }
     }
 }

@@ -5,7 +5,7 @@
     ViewData["Title"] = "InvestorCreateProjectProducts";
 }
 
-<h1>Create Project with Products</h1>
+<h1>Tạo Dự án và các sản phẩm</h1>
 
 <form method="post">
     <div>
@@ -24,7 +24,7 @@
         <span asp-validation-for="Project.ProjectContent" class="text-danger"></span>
     </div>
 
-    <h2>Products</h2>
+    <h2>Sản phẩm</h2>
     <div id="productList">
         @for (int i = 0; i < Model.Products.Count; i++)
         {

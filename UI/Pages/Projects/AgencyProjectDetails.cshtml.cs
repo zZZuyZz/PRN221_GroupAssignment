@@ -8,18 +8,21 @@ using Microsoft.EntityFrameworkCore;
 using BO.Models;
 using Service.IService;
 
-namespace UI.Pages.Products
+namespace UI.Pages.Projects
 {
-    public class DetailsModel : PageModel
+    public class AgencyProjectDetailsModel : PageModel
     {
+        private readonly IProjectService _projectService;
         private readonly IProductService _productService;
 
-        public DetailsModel(IProductService productService)
+        public AgencyProjectDetailsModel(IProjectService projectService, IProductService productService)
         {
+            _projectService = projectService;
             _productService = productService;
         }
 
-      public Product Product { get; set; } = default!; 
+        public Project Project { get; set; } = default!; 
+        public IList<Product>? Products { get; set; }
 
         public async Task<IActionResult> OnGetAsync(Guid id)
         {
@@ -28,14 +31,15 @@ namespace UI.Pages.Products
                 return NotFound();
             }
 
-            var product = _productService.GetById(id);
-            if (product == null)
+            var project = _projectService.GetById(id);
+            if (project == null)
             {
                 return NotFound();
             }
             else 
             {
-                Product = product;
+                Products = _productService.GetByProjectId(id);
+                Project = project;
             }
             return Page();
         }
