@@ -1,4 +1,45 @@
-﻿@page "Product/Details/{productId}"
+﻿@page
 @model UI.Pages.Products.DetailsModel
+
 @{
+    ViewData["Title"] = "Details";
 }
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayName("Tên nhà")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.ProductTitle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Địa chỉ ")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Mô tả")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Giá tiền")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="/Projects/ProjectDetails" asp-route-id="@Model.Product.ProjectId">Back to List</a>
+</div>
+<div>
+    <a asp-page="/Bookings/CustomerBook" asp-route-id="@Model.Product.Id">Đặt lịch</a>
+</div>

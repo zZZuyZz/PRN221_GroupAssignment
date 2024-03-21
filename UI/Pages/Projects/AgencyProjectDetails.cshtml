@@ -1,0 +1,100 @@
+﻿@page
+@model UI.Pages.Projects.AgencyProjectDetailsModel
+
+@{
+    ViewData["Title"] = "AgencyProjectDetails";
+}
+
+<h1>Chi tiet du an</h1>
+
+<div>
+    <a asp-page="./ProjectsList">Back to List</a>
+</div>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayName("Địa chỉ")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.ProjectLocation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Ngày bắt đầu")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Ngày kết thúc")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.EndDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Tên dự án")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.ProjectTitle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Mô tả")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.ProjectContent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Trạng thái")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.ProjectStatus)
+        </dd>
+    </dl>
+</div>
+
+<h2>Danh sách bất động sản</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Tên nhà")
+            </th>
+            <th>
+                @Html.DisplayName("địa chỉ")
+            </th>
+            <th>
+                @Html.DisplayName("Mô tả")
+            </th>
+            <th>
+                @Html.DisplayName("Giá trị")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <td>
+                    <a asp-page="/Bookings/AgencyViewBookingOfProduct" asp-route-id="@item.Id">Chi tiết Booking</a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

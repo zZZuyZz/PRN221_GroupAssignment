@@ -1,0 +1,40 @@
+﻿@page
+@model UI.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+{
+<div class="alert alert-danger" role="alert">
+    @Model.ErrorMessage
+</div>
+}
+
+<form method="post">
+    <div>
+        <label asp-for="User.Email"></label>
+        <input asp-for="User.Email" />
+        <span asp-validation-for="User.Email"></span>
+    </div>
+    <div>
+        <label asp-for="User.Password"></label>
+        <input asp-for="User.Password" />
+        <span asp-validation-for="User.Password"></span>
+    </div>
+    <div>
+        <label asp-for="User.UserName"></label>
+        <input asp-for="User.UserName" />
+        <span asp-validation-for="User.UserName"></span>
+    </div>
+    <div>
+        <label asp-for="User.Phone"></label>
+        <input asp-for="User.Phone" />
+        <span asp-validation-for="User.Phone"></span>
+    </div>
+    <!-- Other fields if needed -->
+    <button type="submit">Register</button>
+</form>
+
+<p>Already have an account <a href="/Index">Login</a></p>
