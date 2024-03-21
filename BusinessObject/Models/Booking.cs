@@ -6,9 +6,12 @@ namespace BO.Models
     public partial class Booking
     {
         public Guid Id { get; set; }
-        public Guid? RealEstateId { get; set; }
+        public Guid? ProductId { get; set; }
         public Guid? CustomerId { get; set; }
         public Guid? AgencyId { get; set; }
+        public string? BookingUserName { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Content { get; set; }
         public DateTime? BookingDate { get; set; }
         public string? Status { get; set; }
         public DateTime? CreatedAt { get; set; }
@@ -18,6 +21,6 @@ namespace BO.Models
 
         public virtual User? Agency { get; set; }
         public virtual User? Customer { get; set; }
-        public virtual Product? RealEstate { get; set; }
+        public virtual Product? Product { get; set; }
     }
 }

@@ -1,0 +1,40 @@
+﻿@page
+@model UI.Pages.Bookings.IndexModel
+
+@{
+    ViewData["Title"] = "AgencyViewBookingOfProduct";
+}
+
+<h1>Danh sách khách đã đặt chỗ đi xem nhà</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Booking[0].BookingUserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Booking[0].PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Booking[0].Content)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Booking) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookingUserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

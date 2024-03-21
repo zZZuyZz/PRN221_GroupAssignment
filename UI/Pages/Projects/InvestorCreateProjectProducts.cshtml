@@ -1,0 +1,94 @@
+﻿@page
+@model UI.Pages.Projects.InvestorCreateProjectProductsModel
+
+@{
+    ViewData["Title"] = "InvestorCreateProjectProducts";
+}
+
+<h1>Tạo Dự án và các sản phẩm</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Project.ProjectTitle"></label>
+        <input asp-for="Project.ProjectTitle" class="form-control" />
+        <span asp-validation-for="Project.ProjectTitle" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Project.ProjectLocation"></label>
+        <input asp-for="Project.ProjectLocation" class="form-control" />
+        <span asp-validation-for="Project.ProjectLocation" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Project.ProjectContent"></label>
+        <input asp-for="Project.ProjectContent" class="form-control" />
+        <span asp-validation-for="Project.ProjectContent" class="text-danger"></span>
+    </div>
+
+    <h2>Sản phẩm</h2>
+    <div id="productList">
+        @for (int i = 0; i < Model.Products.Count; i++)
+        {
+            <div class="product">
+                <div>
+                    <label asp-for="@Model.Products[i].ProductTitle"></label>
+                    <input type="text" asp-for="@Model.Products[i].ProductTitle" class="form-control" />
+                    <span asp-validation-for="@Model.Products[i].ProductTitle" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="@Model.Products[i].Address"></label>
+                    <input type="text" asp-for="@Model.Products[i].Address" class="form-control" />
+                    <span asp-validation-for="@Model.Products[i].Address" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="@Model.Products[i].Description"></label>
+                    <input type="text" asp-for="@Model.Products[i].Description" class="form-control" />
+                    <span asp-validation-for="@Model.Products[i].Description" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="@Model.Products[i].Price"></label>
+                    <input type="text" asp-for="@Model.Products[i].Price" class="form-control" />
+                    <span asp-validation-for="@Model.Products[i].Price" class="text-danger"></span>
+                </div>
+                <button type="button" class="btn btn-danger" onclick="removeProduct(this)">Remove</button>
+            </div>
+        }
+    </div>
+    <button type="button" id="addProduct" class="btn btn-primary">Add Product</button>
+
+    <button type="submit" class="btn btn-success">Create Project</button>
+</form>
+
+@section Scripts {
+    <script>
+        document.getElementById('addProduct').addEventListener('click', function () {
+            var productList = document.getElementById('productList');
+            var productIndex = productList.children.length; // Get the current number of products
+            var product = document.createElement('div');
+            product.className = 'product';
+            product.innerHTML = `
+                    <div>
+                        <label>Title</label>
+                        <input type="text" name="Products[${productIndex}].ProductTitle" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Address</label>
+                        <input type="text" name="Products[${productIndex}].Address" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        <input type="text" name="Products[${productIndex}].Description" class="form-control" />
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input type="text" name="Products[${productIndex}].Price" class="form-control" />
+                    </div>
+                    <button type="button" class="btn btn-danger" onclick="removeProduct(this)">Remove</button>
+                `;
+            productList.appendChild(product);
+        });
+
+        function removeProduct(element) {
+            element.closest('.product').remove();
+        }
+    </script>
+}

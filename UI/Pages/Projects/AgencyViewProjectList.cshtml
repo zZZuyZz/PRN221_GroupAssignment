@@ -1,0 +1,74 @@
+﻿@page
+@model UI.Pages.Projects.AgencyViewProjectListModel
+
+@{
+    ViewData["Title"] = "AgencyViewProjectList";
+}
+
+<h1>AgencyViewProjectList</h1>
+
+<h1>Danh sách dự án</h1>
+
+<div class="col-md-12">
+    <form method="post">
+        <input type="text" name="SearchKey" />
+        <input type="submit" value="Tim bang ten" class="btn btn-info" />
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Địa chỉ")
+            </th>
+            <th>
+                @Html.DisplayName("Ngày bắt đầu")
+            </th>
+            <th>
+                @Html.DisplayName("Ngày kết thúc")
+            </th>
+            <th>
+                @Html.DisplayName("Tên dự án")
+            </th>
+            <th>
+                @Html.DisplayName("Mô tả")
+            </th>
+            <th>
+                @Html.DisplayName("Trạng thái")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Project)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectContent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectStatus)
+                </td>
+                <td>
+                    <a asp-page="./AgencyProjectDetails" asp-route-id="@item.Id">Chi tiết</a> |
+                    <form method="post">
+                        <button type="submit" name="approveButton" class="btn btn-primary" asp-page-handler="OnApprove" asp-route-id="@item.Id">Approve</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BO.Models;
 
 namespace Repo.IRepository
 {
     public interface IProjectRepository
     {
+        Project? GetById(Guid id);
+        public bool CreateProject(Project? project);
+        List<Project>? GetProjects();
+        List<Project>? GetByProjectTitle(string name);
+        List<Project>? GetProjectsByInvestorId(Guid id);
+        public bool ApproveProject(Guid id);
+
     }
 }
