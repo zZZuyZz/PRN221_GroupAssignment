@@ -47,7 +47,7 @@ namespace UI.Pages.Bookings
             _bookingService.CreateBooking(Booking);
 
             //waiting for product detail to return
-            return RedirectToPage("/Projects/ProjectList");
+            return RedirectToPage("/Projects/ProjectsList");
         }
     }
 }
