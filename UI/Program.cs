@@ -15,12 +15,13 @@ builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
-
+builder.Services.AddScoped<IContractRepository, ContractRepository>();
 // Service Dependencies
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IContractService, ContractService>();
 
 builder.Services.AddSession();
 

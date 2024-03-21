@@ -11727,23 +11727,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\noelv\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {},
+    "E:\\fpt\\VS\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "N:\\PRN221_GroupAssignment\\UI\\UI.csproj",
+      "projectUniqueName": "E:\\fpt\\PRN221\\New folder (2)\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "N:\\PRN221_GroupAssignment\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\noelv\\.nuget\\packages\\",
-      "outputPath": "N:\\PRN221_GroupAssignment\\UI\\obj\\",
+      "projectPath": "E:\\fpt\\PRN221\\New folder (2)\\UI\\UI.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "E:\\fpt\\PRN221\\New folder (2)\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "E:\\fpt\\VS\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\noelv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -11758,8 +11758,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "N:\\PRN221_GroupAssignment\\Service\\Service.csproj": {
-              "projectPath": "N:\\PRN221_GroupAssignment\\Service\\Service.csproj"
+            "E:\\fpt\\PRN221\\New folder (2)\\Service\\Service.csproj": {
+              "projectPath": "E:\\fpt\\PRN221\\New folder (2)\\Service\\Service.csproj"
             }
           }
         }
@@ -11817,7 +11817,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
