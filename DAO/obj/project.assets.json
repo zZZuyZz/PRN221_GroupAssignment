@@ -11237,11 +11237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\noelv\\source\\repos\\zZZuyZz\\PRN221_GroupAssignment\\DAO\\DAO.csproj",
+      "projectUniqueName": "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\DAO\\DAO.csproj",
       "projectName": "DAO",
-      "projectPath": "C:\\Users\\noelv\\source\\repos\\zZZuyZz\\PRN221_GroupAssignment\\DAO\\DAO.csproj",
+      "projectPath": "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\DAO\\DAO.csproj",
       "packagesPath": "C:\\Users\\noelv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\noelv\\source\\repos\\zZZuyZz\\PRN221_GroupAssignment\\DAO\\obj\\",
+      "outputPath": "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\DAO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11262,8 +11262,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\noelv\\source\\repos\\zZZuyZz\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj": {
-              "projectPath": "C:\\Users\\noelv\\source\\repos\\zZZuyZz\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj"
+            "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj": {
+              "projectPath": "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\BusinessObject\\BO.csproj"
             }
           }
         }
