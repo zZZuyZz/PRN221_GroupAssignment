@@ -11,5 +11,6 @@ namespace Service.IService
     {
         public bool CreateProduct(Product? product);
 
+        public Product? GetProductById(Guid id, bool includeProject = false);
     }
 }
