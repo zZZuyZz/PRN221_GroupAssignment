@@ -65,42 +65,8 @@
     </div>
     <div class="col-4">
         <h1 class="title">Đăng kí ngay</h1>
-        @if (!Model.IsRegistered)
-        {
-            <form method="post" asp-page-handler="booking">
-                <input type="hidden" name="id" value="@Model.Product.Id" />
-                <button class="btn btn-success btn-lg mb-3">Đăng ký</button>
-            </form>
-        } 
-        else
-        {
-            var message = ViewData["bookingMessage"];
-            if (message != null)
-            {
-                <b>@message</b>            
-            }
-            <button class="btn btn-secondary btn-lg disabled mb-3">Đã đăng ký</button>    
-        }
-        <h1>Thông tin nhà đầu tư</h1>
-        <div class="row" style="margin-left: 14px; line-height: 3rem;">
-            <div class="col-12 row">
-                <span class="col-4 fw-bold" style="margin-right: 30px">Số điện thoại</span>
-                <span class="col">@Model.Product.Investor?.Phone</span>
-                @if (Model.Product.Investor == null)
-                {
-                    <span class="col">Unknown</span>
-                }
-            </div>
-            <div class="col-12 row">
-                <span class="col-4 fw-bold" style="margin-right: 30px">Email</span>
-                <span class="col">@Model.Product.Investor?.Email</span>
-                @if (Model.Product.Investor == null)
-                {
-                    <span class="col">Unknown</span>
-                }
-            </div>
-        </div>
-        <br />
+         <a asp-page="/Bookings/CustomerBook" asp-route-id="@Model.Product.Id">Booking</a>  
+
         <h1>Thông tin dự án</h1>
         <div class="row" style="margin-left: 14px; line-height: 3rem;">
             <div class="col-12 row">

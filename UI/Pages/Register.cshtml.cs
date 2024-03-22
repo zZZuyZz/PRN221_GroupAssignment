@@ -31,6 +31,7 @@ namespace UI.Pages
             var exist = _userService.GetByEmail(User.Email);
             if (exist == null)
             {
+                User.Id = Guid.NewGuid();
                 _userService.Regiter(User);
                 return RedirectToPage("/Index");
             }

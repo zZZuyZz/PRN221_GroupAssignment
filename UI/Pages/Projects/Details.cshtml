@@ -84,26 +84,6 @@
         </div>
     </div>
     <div class="col-4">
-        <h1>Thông tin nhà đầu tư</h1>
-        <div class="row" style="margin-left: 14px; line-height: 3rem;">
-            <div class="col-12 row">
-                <span class="col-4 fw-bold" style="margin-right: 30px">Số điện thoại</span>
-                <span class="col">@Model.Project.Investor?.Phone</span>
-                @if (Model.Project.Investor == null)
-                {
-                    <span class="col">Unknown</span>
-                }
-            </div>
-            <div class="col-12 row">
-                <span class="col-4 fw-bold" style="margin-right: 30px">Email</span>
-                <span class="col">@Model.Project.Investor?.Email</span>
-                @if (Model.Project.Investor == null)
-                {
-                    <span class="col">Unknown</span>
-                }
-            </div>
-        </div>
-        <br />
         <h1>Thông tin dự án</h1>
         <div class="row" style="margin-left: 14px; line-height: 3rem;">
             <div class="col-12 row">
