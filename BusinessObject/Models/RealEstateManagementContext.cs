@@ -162,7 +162,7 @@ namespace BO.Models
 
                 entity.Property(e => e.EndDate).HasColumnType("datetime");
 
-                entity.Property(e => e.ProjectContent).HasMaxLength(255);
+                entity.Property(e => e.ProjectContent).HasColumnType("text");
 
                 entity.Property(e => e.ProjectGeoLocationUrl).HasMaxLength(50);
 

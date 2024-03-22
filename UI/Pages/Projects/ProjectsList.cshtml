@@ -62,7 +62,8 @@
                 @Html.DisplayFor(modelItem => item.ProjectContent)
             </td>
             <td>
-                <a asp-page="./ProjectDetails" asp-route-id="@item.Id">Chi tiết</a> |
+                @* <a asp-page="./ProjectDetails" asp-route-id="@item.Id">Chi tiết</a> | *@
+                <a href="/Project/Details/@item.Id">Chi tiết</a>
             </td>
         </tr>
 }

@@ -35,7 +35,7 @@ CREATE TABLE Projects(
 	StartDate datetime,
 	EndDate datetime,
 	ProjectTitle nvarchar(255),
-	ProjectContent nvarchar(255),
+	ProjectContent TEXT,
 	CreatedAt datetime,
 	CreatedBy nvarchar(50),
     UpdatedAt datetime,

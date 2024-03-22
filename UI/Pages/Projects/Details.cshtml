@@ -25,7 +25,6 @@
         <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-        //TODO - replace with real data
         <div class="carousel-item active">
             <img width="50px" src="https://file4.batdongsan.com.vn/2024/03/03/20240303211226-5260_wm.jpg" class="d-block w-100" alt="...">
         </div>
@@ -70,13 +69,13 @@
                 @for (int i = 0; i < Model.Project.Products.Count; i++)
                 {
                     Product product = @Model.Project.Products.ElementAt(i);
-                    <div class="d-inline-block">
+                    <div class="d-inline-block" style="width: 200px">
                         <div class="card">
                             <img class="card-img-top" src="https://file4.batdongsan.com.vn/2024/03/03/20240303211226-5260_wm.jpg" height="100px" width="auto" style="object-fit: cover"/>
                             <div class="cardd-body" style="padding: 16px">
-                                <p class="card-title">@product.Address</p>
+                                <p class="card-title text-truncate">@product.ProductTitle</p>
                                 <br />
-                                <a class="btn btn-primary" asp-page="../Products/Details" asp-route-productId="@product.Id">See detail</a>
+                                <a class="btn btn-primary" href="/Product/Details/@product.Id">Xem thêm</a>
                             </div>
                         </div>
                     </div>
