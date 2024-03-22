@@ -28,7 +28,7 @@ namespace Service
 
         public void EditContract(Contract updatedContract) => _contractRepository.EditContract(updatedContract);
 
-        public List<Booking> GetBookingList(Guid idProduct)=>_contractRepository.GetBookingList(idProduct);
+        public List<Booking> GetBookingList() => _contractRepository.GetBookingList();
 
     }
 }

@@ -73,13 +73,11 @@ namespace DAO
                 dbContext.SaveChanges();
             }
         }
-        public List<Booking> GetBookingList(Guid idProduct)
+        public List<Booking> GetBookingList()
         {
 
-            return dbContext.Bookings
-                    .Where(booking => booking.RealEstateId == idProduct)
-                    .ToList();
+            return dbContext.Bookings.ToList();
         }
-        
+
     }
 }

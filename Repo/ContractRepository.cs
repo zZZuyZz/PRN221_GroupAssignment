@@ -11,19 +11,19 @@ namespace Repo
 {
     public class ContractRepository : IContractRepository
     {
-        public void AddContract(Contract contract)=>ContractDAO.Instance.AddContract(contract);
+        public void AddContract(Contract contract) => ContractDAO.Instance.AddContract(contract);
 
-        public void DeleteContract(Guid id)=>ContractDAO.Instance.DeleteContract(id);
- 
-
-        public void EditContract(Contract updatedContract)=>ContractDAO.Instance.EditContract(updatedContract);
-
-        public List<Booking> GetBookingList(Guid idProduct)=>ContractDAO.Instance.GetBookingList(idProduct);    
-
-        public Contract GetContract(Guid id)=>ContractDAO.Instance.GetContract(id);
+        public void DeleteContract(Guid id) => ContractDAO.Instance.DeleteContract(id);
 
 
-        public List<Contract> GetContractList()=>ContractDAO.Instance.GetContractList();
+        public void EditContract(Contract updatedContract) => ContractDAO.Instance.EditContract(updatedContract);
+
+        public List<Booking> GetBookingList() => ContractDAO.Instance.GetBookingList();
+
+        public Contract GetContract(Guid id) => ContractDAO.Instance.GetContract(id);
+
+
+        public List<Contract> GetContractList() => ContractDAO.Instance.GetContractList();
 
     }
 }

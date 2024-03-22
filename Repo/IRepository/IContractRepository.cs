@@ -14,6 +14,6 @@ namespace Repo.IRepository
         public void AddContract(Contract contract);
         public void DeleteContract(Guid id);
         public void EditContract(Contract updatedContract);
-        public List<Booking> GetBookingList(Guid idProduct);
+        public List<Booking> GetBookingList();
     }
 }
