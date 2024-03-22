@@ -11255,11 +11255,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "N:\\PRN221_GroupAssignment\\Repo\\Repo.csproj",
+      "projectUniqueName": "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\Repo\\Repo.csproj",
       "projectName": "Repo",
-      "projectPath": "N:\\PRN221_GroupAssignment\\Repo\\Repo.csproj",
+      "projectPath": "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\Repo\\Repo.csproj",
       "packagesPath": "C:\\Users\\noelv\\.nuget\\packages\\",
-      "outputPath": "N:\\PRN221_GroupAssignment\\Repo\\obj\\",
+      "outputPath": "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\Repo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11280,8 +11280,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "N:\\PRN221_GroupAssignment\\DAO\\DAO.csproj": {
-              "projectPath": "N:\\PRN221_GroupAssignment\\DAO\\DAO.csproj"
+            "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\DAO\\DAO.csproj": {
+              "projectPath": "C:\\Users\\noelv\\Source\\Repos\\zZZuyZz\\PRN221_GroupAssignment\\DAO\\DAO.csproj"
             }
           }
         }
@@ -11316,7 +11316,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -12,9 +12,12 @@ namespace Service
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
-        public ProductService(IProductRepository productRepository)
+        private readonly IProjectRepository _projectRepository;
+
+        public ProductService(IProductRepository productRepository, IProjectRepository projectRepository)
         {
             _productRepository = productRepository;
+            _projectRepository = projectRepository;
         }
 
         public bool CreateProduct(Product? product)
@@ -30,6 +33,20 @@ namespace Service
         public List<Product> GetByProjectId(Guid projectId)
         {
             return _productRepository.GetByProjectId(projectId);
+        }
+
+        public Product? GetProductById(Guid id, bool includeProject = false)
+        {
+            var product = _productRepository.GetById(id);
+            if (product == null)
+            {
+                return null;
+            }
+            if (includeProject)
+            {
+                product.Project = _projectRepository.GetById((Guid)product.ProjectId!);
+            }
+            return product;
         }
     }
 }
