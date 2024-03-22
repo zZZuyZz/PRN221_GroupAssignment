@@ -24,7 +24,6 @@ namespace UI.Pages.Bookings
 
         public void OnGet(Guid? productId)
         {
-            productId = Guid.Parse("d6f4e6b6-660f-473c-9233-0339335d0a7d");
             Booking = _bookingService.GetBookingsByProductId(productId) ;
         }
     }

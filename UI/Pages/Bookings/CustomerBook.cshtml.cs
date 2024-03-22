@@ -40,16 +40,14 @@ namespace UI.Pages.Bookings
             Booking.CreatedBy = Guid.NewGuid().ToString();
 
             // Example: Get userId from session, waiting for session from login
-            Booking.CustomerId = Guid.Parse("13b83b30-200d-4db1-8c9b-173a64b38ba6");
-
-            productId = Guid.Parse("d6f4e6b6-660f-473c-9233-0339335d0a7d");
+            Booking.CustomerId =Guid.Parse(HttpContext.Session.GetString("Id"));
 
             Booking.ProductId = productId;
 
             _bookingService.CreateBooking(Booking);
 
             //waiting for product detail to return
-            return RedirectToPage("Products/Details");
+            return RedirectToPage("/Projects/ProjectsList");
         }
     }
 }

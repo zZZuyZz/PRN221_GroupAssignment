@@ -40,10 +40,10 @@ namespace UI.Pages.Projects
             }
             Project.Id = Guid.NewGuid();
             //wating for userId from session login
-            Project.InvestorId = Guid.NewGuid();
+            Project.InvestorId = Guid.Parse(HttpContext.Session.GetString("Id"));
+
             Project.ProjectStatus = "Cho duyet";
             Project.CreatedAt = DateTime.Now;
-
 
             _projectService.CreateProject(Project);
 
@@ -53,8 +53,7 @@ namespace UI.Pages.Projects
                 product.ProjectId = Project.Id; // Assign projectId to products
 
                 // waiting for userid from session login
-                product.InvestorId = Guid.NewGuid();
-                product.CreatedBy = Guid.NewGuid().ToString();
+                product.InvestorId = Guid.Parse(HttpContext.Session.GetString("Id"));
 
                 product.CreatedAt = DateTime.Now;
 
@@ -62,7 +61,7 @@ namespace UI.Pages.Projects
             };
 
             //waiting for return page
-            return RedirectToPage("/Index");
+            return RedirectToPage("./ProjectsList");
         }
     }
 }

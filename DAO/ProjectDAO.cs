@@ -21,6 +21,10 @@ namespace DAO
         {
             return _context.Projects.FirstOrDefault(p => p.Id.Equals(id));
         }
+        public List<Project>? GetByProjectTitle(string name)
+        {
+            return _context.Projects.Where(p => p.ProjectTitle.Contains(name)).ToList();
+        }
         public bool CreateProject(Project? booking)
         {
             bool result = false;
@@ -35,6 +39,37 @@ namespace DAO
                 return result;
             }
             return result;
+        }
+        public bool ApproveProject(Guid id)
+        {
+            bool result = false;
+            try
+            {
+                var existingProject = _context.Projects.Find(id);
+                if (existingProject == null)
+                {
+                    // Xử lý trường hợp dự án không tồn tại
+                    return false;
+                }
+
+                // Cập nhật chỉ các thuộc tính cần thay đổi
+                existingProject.ProjectStatus = "Da duyet";
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return result;
+            }
+            return result;
+        }
+        public List<Project>? GetProjects()
+        {
+            return _context.Projects.ToList();
+        }
+        public List<Project>? GetProjectsByInvestorId(Guid id)
+        {
+            return _context.Projects.Where(x => x.Id == id).ToList();
         }
     }
 }
