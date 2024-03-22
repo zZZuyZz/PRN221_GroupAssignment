@@ -28,7 +28,7 @@
                 <select asp-for="Contract.CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
             <div class="form-group">
                     <label asp-for="Contract.AgencyId" class="control-label"></label>
-                    <input asp-for="Contract.AgencyId" class="form-control" value="@HttpContext.Session.GetString("UserId")" readonly />
+                    <input asp-for="Contract.AgencyId" class="form-control" readonly />
             </div>
 
             <div class="form-group">
@@ -36,21 +36,7 @@
                 <input asp-for="Contract.DepositAmount" class="form-control" />
                 <span asp-validation-for="Contract.DepositAmount" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Contract.ContractDate" class="control-label"></label>
-                <input asp-for="Contract.ContractDate" class="form-control" />
-                <span asp-validation-for="Contract.ContractDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Contract.CreatedAt" class="control-label"></label>
-                <input asp-for="Contract.CreatedAt" class="form-control" />
-                <span asp-validation-for="Contract.CreatedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Contract.CreatedBy" class="control-label"></label>
-                <input asp-for="Contract.CreatedBy" class="form-control" />
-                <span asp-validation-for="Contract.CreatedBy" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
