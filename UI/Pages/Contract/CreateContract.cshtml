@@ -1,4 +1,4 @@
-﻿@page
+﻿@page 
 @model UI.Pages.Contract.CreateContractModel
 @{
     ViewData["Title"] = "Create";
@@ -17,18 +17,20 @@
                 <input asp-for="Contract.Id" class="form-control" disabled />
                 <span asp-validation-for="Contract.Id" class="text-danger"></span>
             </div>
-
             <div class="form-group">
-                <label asp-for="Product.ProductTitle" class="control-label"></label>
-                <input asp-for="Product.ProductTitle" class="form-control" />
-                <span asp-validation-for="Product.ProductTitle" class="text-danger"></span>
+                <label asp-for="Contract.AgencyId" class="control-label"></label>
+                <input id="agencyIdInput" asp-for="Contract.AgencyId" class="form-control" disabled />
             </div>
             <div class="form-group">
-                <label asp-for="Contract.CustomerId" class="control-label"></label>
-                <select asp-for="Contract.CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
+                <label asp-for="Product.ProductTitle" class="control-label"></label>
+                <input asp-for="Product.ProductTitle" class="form-control" disabled />
+                <span asp-validation-for="Product.ProductTitle" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
-                    <label asp-for="Contract.AgencyId" class="control-label"></label>
-                    <input asp-for="Contract.AgencyId" class="form-control" readonly />
+                <label asp-for="Booking.CustomerId" class="control-label"></label>
+                <select asp-for="Booking.CustomerId" class="form-control" asp-items="ViewBag.CustomerList"></select>
+                <span asp-validation-for="Booking.CustomerId" class="text-danger"></span>
             </div>
 
             <div class="form-group">
@@ -45,10 +47,26 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="./AgencyViewBookingOfProduct">Back to List</a>
 </div>
 
 @section Scripts {
+    <script>
+        // Function to set the value of the AgencyId input field
+        function setAgencyIdValue() {
+            // Fetch the loginId value from the session
+            var loginId = '@HttpContext.Session.GetString("Id")';
+
+            // Set the value of the input field to the loginId
+            document.getElementById('agencyIdInput').value = loginId;
+        }
+
+        // Call the setAgencyIdValue function when the page is loaded
+        window.onload = function () {
+            setAgencyIdValue();
+        };
+    </script>
+
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
