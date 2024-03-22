@@ -17,5 +17,7 @@ namespace Repo
         public List<Project>? GetProjects() => ProjectDAO.Instance.GetProjects();
 
         public List<Project>? GetProjectsByInvestorId(Guid id) => ProjectDAO.Instance.GetProjectsByInvestorId(id);
+
+        public List<Project>? GetProjectsByStatus() => ProjectDAO.Instance.GetProjectsByStatus();
     }
 }

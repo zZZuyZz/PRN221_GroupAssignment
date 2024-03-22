@@ -53,7 +53,8 @@ namespace DAO
                 }
 
                 // Cập nhật chỉ các thuộc tính cần thay đổi
-                existingProject.ProjectStatus = "Da duyet";
+                existingProject.ProjectStatus = "Đã duyệt";
+                existingProject.StartDate = DateTime.Now;
                 _context.SaveChanges();
                 return true;
             }
@@ -66,6 +67,10 @@ namespace DAO
         public List<Project>? GetProjects()
         {
             return _context.Projects.ToList();
+        }
+        public List<Project>? GetProjectsByStatus()
+        { 
+            return _context.Projects.Where(x => x.ProjectStatus == "Đã duyệt").ToList();
         }
         public List<Project>? GetProjectsByInvestorId(Guid id)
         {

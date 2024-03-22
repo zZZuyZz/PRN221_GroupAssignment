@@ -26,13 +26,13 @@ namespace UI.Pages.Projects
 
         public async Task OnGetAsync()
         {
-            Project = _projectService.GetProjects();
+            Project = _projectService.GetProjectsByStatus();
         }
         public IActionResult OnPost()
         {
             if (SearchKey == null)
             {
-                Project = _projectService.GetProjects();
+                Project = _projectService.GetProjectsByStatus();
                 return Page();
             }
             else

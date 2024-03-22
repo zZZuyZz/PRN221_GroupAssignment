@@ -42,7 +42,7 @@ namespace UI.Pages.Projects
             //wating for userId from session login
             Project.InvestorId = Guid.Parse(HttpContext.Session.GetString("Id"));
 
-            Project.ProjectStatus = "Cho duyet";
+            Project.ProjectStatus = "Chờ duyệt";
             Project.CreatedAt = DateTime.Now;
 
             _projectService.CreateProject(Project);

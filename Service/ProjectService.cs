@@ -52,5 +52,10 @@ namespace Service
         {
             return projectRepository.GetProjectsByInvestorId(id);
         }
+
+        public List<Project>? GetProjectsByStatus()
+        {
+            return projectRepository.GetProjectsByStatus();
+        }
     }
 }
